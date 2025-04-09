@@ -1,0 +1,230 @@
+{
+    "version": 1,
+    "author": "nizar mejri",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "board-esp32-devkit-c-v4",
+            "id": "esp",
+            "top": 153.6,
+            "left": -177.56,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-lcd1602",
+            "id": "lcd1",
+            "top": -34.97,
+            "left": -89.6,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-vcc",
+            "id": "vcc1",
+            "top": 154.36,
+            "left": 182.4,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-gnd",
+            "id": "gnd1",
+            "top": 249.6,
+            "left": 95.4,
+            "attrs": {}
+        },
+        {
+            "type": "board-ds18b20",
+            "id": "temp1",
+            "top": 56.47,
+            "left": -255.12,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-buzzer",
+            "id": "buzz1",
+            "top": 98.4,
+            "left": 261,
+            "attrs": {}
+        }
+    ],
+    "connections": [
+        [
+            "esp:TX",
+            "$serialMonitor:RX",
+            "",
+            []
+        ],
+        [
+            "esp:RX",
+            "$serialMonitor:TX",
+            "",
+            []
+        ],
+        [
+            "lcd1:VSS",
+            "esp:GND.2",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "lcd1:VDD",
+            "esp:5v",
+            "red",
+            [
+                "v38.4",
+                "h-172.7"
+            ]
+        ],
+        [
+            "lcd1:RS",
+            "esp:19",
+            "gold",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "lcd1:RW",
+            "esp:GND.1",
+            "#8f4814",
+            [
+                "v288",
+                "h-201.7",
+                "v-9.6"
+            ]
+        ],
+        [
+            "lcd1:E",
+            "esp:23",
+            "green",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "lcd1:D4",
+            "esp:18",
+            "violet",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "lcd1:D5",
+            "esp:5",
+            "blue",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "lcd1:D6",
+            "esp:4",
+            "gray",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "lcd1:D7",
+            "esp:15",
+            "orange",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "lcd1:V0",
+            "esp:GND",
+            "black",
+            []
+        ],
+        [
+            "vcc1:VCC",
+            "lcd1:A",
+            "red",
+            [
+                "v19.2",
+                "h-86.4"
+            ]
+        ],
+        [
+            "gnd1:GND",
+            "lcd1:K",
+            "black",
+            [
+                "v-124.8"
+            ]
+        ],
+        [
+            "temp1:GND",
+            "esp:GND.1",
+            "black",
+            [
+                "v96",
+                "h38.4",
+                "v76.8",
+                "h19.2",
+                "v28.8"
+            ]
+        ],
+        [
+            "temp1:DQ",
+            "esp:2",
+            "green",
+            [
+                "v297.6",
+                "h192",
+                "v9.6"
+            ]
+        ],
+        [
+            "temp1:VCC",
+            "esp:3V3",
+            "red",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "buzz1:GND",
+            "esp:GND",
+            "black",
+            []
+        ],
+        [
+            "buzz1:VCC",
+            "esp:3.3V",
+            "red",
+            []
+        ],
+        [
+            "buzz1:S",
+            "esp:13",
+            "yellow",
+            []
+        ],
+        [
+            "buzz1:1",
+            "esp:GND.2",
+            "black",
+            [
+                "v163.2",
+                "h-345.6",
+                "v-163.2"
+            ]
+        ],
+        [
+            "esp:13",
+            "buzz1:2",
+            "magenta",
+            [
+                "h-19.05",
+                "v105.6",
+                "h508.8"
+            ]
+        ]
+    ],
+    "dependencies": {}
+}
