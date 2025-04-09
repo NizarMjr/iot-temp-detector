@@ -1,7 +1,7 @@
 #include <LiquidCrystal.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
-#include <secrets.h>
+#include <../secrets.h>
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
 
